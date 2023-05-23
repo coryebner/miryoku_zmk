@@ -2,7 +2,7 @@
 &kp N2,        &kp N3,            &kp N4,                &kp N5,            &kp R,                   &kp Y,             &kp U,             &kp I,             &kp O,             &kp P,     \
 &kp LSHFT,     &kp A,             &kp W,                 &kp D,             &kp F,                   &kp H,             &kp J,             &kp K,             &kp L,             &kp SQT,   \
 &kp LCTRL,     &kp Q,             &kp S,                 &kp E,             &kp B,                   &kp N,             &kp M,             &kp COMMA,         &kp DOT,           &kp SLASH, \
-U_NP,          U_NP,              U_LT(U_GAME_MEDIA, G), &kp SPACE,         U_LT(U_GAME_MOUSE, V),   &to U_BASE,        &kp BSPC,          &kp DEL,           U_NP,              U_NP
+U_NP,          U_NP,              U_LT(U_GAME_MEDIA, G), &kp SPACE,         U_LT(U_GAME_MOUSE, V),   &kp ENTER,         &kp BSPC,          &kp DEL,           U_NP,              U_NP
 
 #define MIRYOKU_LAYER_GAME_MEDIA \
 &kp F2,        &kp F3,            &kp F4,                &kp F5,            &kp F6,               U_NA,              U_NA,             U_NA,             U_NA,             U_NA, \
