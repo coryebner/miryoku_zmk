@@ -82,18 +82,17 @@ XXX  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
 #define MIRYOKU_KLUDGE_THUMBCOMBOS_LEFT 37 38
 #define MIRYOKU_KLUDGE_THUMBCOMBOS_RIGHT 39 40
 
-
-#if defined (MIRYOKU_KEYBOARD_TBKMINI_ADAPTERV2) || defined (MIRYOKU_KEYBOARD_CORNE)
+#if defined MIRYOKU_KEYBOARD_CORNE
      #define MIRYOKU_LAYERMAPPING_GAME( \
           K00, K01, K02, K03, K04,      K05, K06, K07, K08, K09, \
           K10, K11, K12, K13, K14,      K15, K16, K17, K18, K19, \
           K20, K21, K22, K23, K24,      K25, K26, K27, K28, K29, \
           N30, N31, K32, K33, K34,      K35, K36, K37, N38, N39 \
      ) \
-     &kp N1  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans \
-     &kp G   &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans \
-     &kp V   &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  XXX \
-                             &trans  &trans  &trans       &trans  &trans  &trans
+     &kp N1  K00  K01  K02  K03  K04       K05  K06  K07  K08  K09  &trans \
+     &kp G   K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  &trans \
+     &kp V   K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
+                       K32  K34  K33       K36  K35  K37
 
      #define MIRYOKU_LAYERMAPPING_GAME_MEDIA( \
           K00, K01, K02, K03, K04,      K05, K06, K07, K08, K09, \
@@ -101,10 +100,10 @@ XXX  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
           K20, K21, K22, K23, K24,      K25, K26, K27, K28, K29, \
           N30, N31, K32, K33, K34,      K35, K36, K37, N38, N39 \
      ) \
-     &kp ESC   &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans \
-     &kp GRAVE &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans \
-     &kp LALT  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  XXX \
-                               &trans  &trans  &trans       &trans  &trans  &trans
+     &kp ESC   K00  K01  K02  K03  K04       K05  K06  K07  K08  K09  &trans \
+     &kp GRAVE K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  &trans \
+     &kp LALT  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
+                         K32  K34  K33       K36  K35  K37
 
      #define MIRYOKU_LAYERMAPPING_GAME_MOUSE( \
           K00, K01, K02, K03, K04,      K05, K06, K07, K08, K09, \
@@ -112,10 +111,45 @@ XXX  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
           K20, K21, K22, K23, K24,      K25, K26, K27, K28, K29, \
           N30, N31, K32, K33, K34,      K35, K36, K37, N38, N39 \
      ) \
-     &kp F1     &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans \
-     &kp F13    &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans \
-     &kp F14    &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  XXX \
-                                &trans  &trans  &trans       &trans  &trans  &trans
+     &kp F1   K00  K01  K02  K03  K04       K05  K06  K07  K08  K09  &trans \
+     &kp F13  K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  &trans \
+     &kp F14  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
+                        K32  K34  K33       K36  K35  K37
+#endif
+
+#if defined MIRYOKU_KEYBOARD_TBKMINI_ADAPTERV2
+     #define MIRYOKU_LAYERMAPPING_GAME( \
+          K00, K01, K02, K03, K04,      K05, K06, K07, K08, K09, \
+          K10, K11, K12, K13, K14,      K15, K16, K17, K18, K19, \
+          K20, K21, K22, K23, K24,      K25, K26, K27, K28, K29, \
+          N30, N31, K32, K33, K34,      K35, K36, K37, N38, N39 \
+     ) \
+     &kp N1  K00  K01  K02  K03  K04       K05  K06  K07  K08  K09  &trans \
+     &kp G   K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  &trans \
+     &kp V   K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
+                       K32  K33  K34       K35  K36  K37
+
+     #define MIRYOKU_LAYERMAPPING_GAME_MEDIA( \
+          K00, K01, K02, K03, K04,      K05, K06, K07, K08, K09, \
+          K10, K11, K12, K13, K14,      K15, K16, K17, K18, K19, \
+          K20, K21, K22, K23, K24,      K25, K26, K27, K28, K29, \
+          N30, N31, K32, K33, K34,      K35, K36, K37, N38, N39 \
+     ) \
+     &kp ESC   K00  K01  K02  K03  K04       K05  K06  K07  K08  K09  &trans \
+     &kp GRAVE K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  &trans \
+     &kp LALT  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
+                         K32  K33  K34       K35  K36  K37
+
+     #define MIRYOKU_LAYERMAPPING_GAME_MOUSE( \
+          K00, K01, K02, K03, K04,      K05, K06, K07, K08, K09, \
+          K10, K11, K12, K13, K14,      K15, K16, K17, K18, K19, \
+          K20, K21, K22, K23, K24,      K25, K26, K27, K28, K29, \
+          N30, N31, K32, K33, K34,      K35, K36, K37, N38, N39 \
+     ) \
+     &kp F1   K00  K01  K02  K03  K04       K05  K06  K07  K08  K09  &trans \
+     &kp F13  K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  &trans \
+     &kp F14  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
+                        K32  K33  K34       K35  K36  K37
 
 #endif
 
