@@ -10,4 +10,4 @@ jobs:
     with:
       board: '["nice_nano_v2"]'
       shield: '["corne_left nice_view_adapter nice_view","corne_right nice_view_adapter nice_view"]'
-      kconfig: '["CONFIG_ZMK_KSCAN_DEBOUNCE_PRESS_MS=1"]'
+      kconfig: '["CONFIG_ZMK_KSCAN_DEBOUNCE_PRESS_MS=1","CONFIG_ZMK_SLEEP=y","CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=3600000"]'
